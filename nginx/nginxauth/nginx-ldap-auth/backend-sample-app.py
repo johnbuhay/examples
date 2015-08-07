@@ -12,7 +12,7 @@
 import sys, os, signal, base64, Cookie, cgi, urlparse
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 
-Listen = ('localhost', 9000)
+Listen = ('0.0.0.0', 9000)
 
 import threading
 from SocketServer import ThreadingMixIn
