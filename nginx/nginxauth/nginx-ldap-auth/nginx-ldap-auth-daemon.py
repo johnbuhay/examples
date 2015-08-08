@@ -7,7 +7,7 @@
 import sys, os, signal, base64, ldap, Cookie
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 
-Listen = ('0.0.0.0', 8888)
+Listen = ('localhost', 8888)
 #Listen = "/tmp/auth.sock"    # Also uncomment lines in 'Requests are
                               # processed with UNIX sockets' section below
 
