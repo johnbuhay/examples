@@ -4,7 +4,8 @@
 docker run -d --name ldap -p 389:389 -p 636:636 osixia/openldap
 echo "wait 3 for ldap" && sleep 3
 
-cd nginx-ldap-auth && ./build.sh && cd -
+cd backend && ./build.sh && cd -
+cd nginx-all && ./build.sh && cd -
 
 # docker exec auth python backend-sample-app.py &
 # docker exec auth ./nginx-ldap-auth-daemon-ctl.sh start
