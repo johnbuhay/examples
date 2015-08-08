@@ -2,7 +2,7 @@
 
 
 docker run -d --name ldap -p 389:389 -p 636:636 osixia/openldap
-sleep 5 # wait for ldap
+ echo "wait 5 for ldap" && sleep 5
 
 cd nginx-ldap-auth && ./build.sh && cd -
 
