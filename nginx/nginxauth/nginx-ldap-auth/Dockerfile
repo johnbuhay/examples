@@ -32,4 +32,5 @@ COPY nginx-ldap-auth.conf /etc/nginx/nginx.conf
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN nginx -t
 
-CMD ["service", "nginx", "start"]
+COPY entrypoint.sh /usr/src/entrypoint.sh
+ENTRYPOINT ["./entrypoint.sh"]
