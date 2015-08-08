@@ -16,4 +16,4 @@ curl -i -H "Cookie: nginxauth=am9objpidWhheQ==; httponly" http://192.168.59.103
 curl -i -d "username=admin&password=admin&target=/login"  -X POST http://192.168.59.103/login
 curl -i -H "Cookie: nginxauth=YWRtaW46YWRtaW4=; httponly" http://192.168.59.103
 
-curl -i -H "Cookie: nginxauth=YWRtaW46YWRtaW4=; httponly" http://192.168.59.103 | grep "Hello, world!" || printf "\nTest failed." && printf "\nTest passed!"
+curl -i -H "Cookie: nginxauth=YWRtaW46YWRtaW4=; httponly" http://192.168.59.103 | grep "Hello, world!" && printf "\nTest passed!" || printf "\nTest failed."
