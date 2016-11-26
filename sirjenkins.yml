@@ -1,11 +1,6 @@
-- job:
-    name: matrix-test
-    project-type: matrix
-    axes:
-      - axis:
-         type: label-expression
-         name: folder
-         values:
-          - nginx 
-    builders:
-      - shell: ls
+---
+
+- project:
+    name: examples
+    jobs:
+      - '{name}-job'
