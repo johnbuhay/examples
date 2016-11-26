@@ -3,4 +3,4 @@
 - project:
     name: examples
     jobs:
-      - '{name}/{name}-{branches}-builder'
+      - '{name}-{branch_name}-builder'
