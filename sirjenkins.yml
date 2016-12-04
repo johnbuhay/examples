@@ -1,6 +1,17 @@
 ---
-
-- project:
-    name: examples
-    jobs:
-      - '{name}/{name}-{build}-job'
+jobs:
+  -
+    name: foo-test
+    description: |
+      multiline
+      description
+    downstream:
+      - name/of-job
+    scm: jnbnyc/examples
+    # scm_url: https://github.com
+    # builders:
+    #   - shell: 'make test'
+    #   - shell: |
+    #       echo multiline
+    #       echo shell-step 
+    node: master
