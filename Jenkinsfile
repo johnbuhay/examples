@@ -1,6 +1,6 @@
 #!/usr/bin/groovy
 
-@Library('github.com/jnbnyc/yaml-to-jenkins@master')
-def pipeline = new io.jnbnyc.jenkins()
+@Library('yaml-to-jenkins')
+import yaml.to.jenkins.Load
 
-jenkins.load('sirjenkins.yml')
+Load.yaml('sirjenkins.yml')
