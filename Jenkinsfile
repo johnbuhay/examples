@@ -1,6 +1,6 @@
-#!/usr/bin/groovy
 
-@Library('yaml-to-jenkins')
-import yaml.to.jenkins.Load.*
+//@Library('yaml-to-jenkins')
+//import yaml.to.jenkins.Pipeline
 
-yaml.to.jenkins.Load.yaml('sirjenkins.yml')
+//readYaml('sirjenkins.yml')
+echo 'Success'
