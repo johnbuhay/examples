@@ -3,4 +3,4 @@
 @Library('yaml-to-jenkins')
 import yaml.to.jenkins.Load.*
 
-Load.yaml('sirjenkins.yml')
+yaml.to.jenkins.Load.yaml('sirjenkins.yml')
