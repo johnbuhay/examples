@@ -1,2 +1,1 @@
-readYaml('sirjenkins.yml')
-//new yaml.to.jenkins.Pipeline().pipeline('sirjenkins.json')
+yaml_to_jenkins('sirjenkins.yml')
