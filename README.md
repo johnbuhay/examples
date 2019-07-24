@@ -1,5 +1,8 @@
 # examples
 
+## [HashiCorp Vault](./vault)
+> 2019-07-23
+
 ## nginx
 
 ### 1. nginx-ldap-auth

@@ -1,0 +1,34 @@
+---
+version: '3'
+
+services:
+
+  # https://hub.docker.com/_/vault
+  vault:
+    container_name: vault
+    image: vault:1.1.3
+    ports: ["8200:8200"]
+    volumes:
+      - ./vault:/vault
+      # - ./vault/config:/vault/config
+      # - ./vault/policies:/vault/policies
+      # - ./vault/data:/vault/data
+      # - ./vault/logs:/vault/logs
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+    command: server -config=/vault/config/vault-config.json
+    cap_add:
+      - IPC_LOCK
+
+  unseal:
+    image: vault:1.1.3
+    volumes:
+      - ./vault:/vault
+      - ./unseal/entrypoint.sh:/entrypoint.sh
+    environment:
+      - VAULT_ADDR=http://vault:8200
+    entrypoint:
+      - sh
+      - -c
+    command:
+      - /entrypoint.sh
